@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="filters">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select panelClass="sort-select" [(ngModel)]="sort">
+            <mat-option value="name">Name</mat-option>
+            <mat-option value="email">Email</mat-option>
+            <mat-option value="gender">Gender</mat-option>
+            <mat-option value="status">Status</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

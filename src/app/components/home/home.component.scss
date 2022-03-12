@@ -1,0 +1,95 @@
+.filters {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+::ng-deep {
+    .mat-form-field.mat-focused .mat-form-field-label {
+        color: black;
+        border: #ade8f4 !important;
+    }
+    .mat-form-field-infix {
+        background-color: white !important;
+        border-top: none;
+        padding-left: 5px !important;
+    }
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+        color: black;
+        opacity: 1;
+        border: #ade8f4 !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+        padding-left: 5px;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: #ade8f4 !important;
+    }
+    .mat-option {
+        color: black;
+    }
+    .mat-option.mat-active {
+        background: #ade8f4 !important;
+        color: white !important;
+    }
+    .mat-select-panel {
+        background: white !important;
+        color: black;
+    }
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.user {
+    width: 280px;
+    margin: 10px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 3px 2px 3px 2px rgb(173 232 244);
+    transition-duration: 0.3s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 3px 2px 9px 3px rgb(173 232 244);
+        transform: translateY(-1px);
+    }
+    &-thumb-container {
+        background-color: white;
+        position: relative;
+        height: 172px;
+        text-align: center;
+    }
+    &-thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 172px;
+    }
+    &-details {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 157px;
+    }
+    &-name {
+        color: black;
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        //overflow: hidden;
+    }
+}

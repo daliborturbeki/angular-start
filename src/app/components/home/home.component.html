@@ -11,15 +11,35 @@
 </div>
 
 <div class="users">
-    <div class="user">
-        <div class="user-thumb-container">
-            <img src="https://robohash.org/asddas" alt="thumbnail" />
+    <ng-container *ngFor="let user of users">
+        <div class="user">
+            <div class="user-thumb-container">
+                <img src="https://robohash.org/{{user.id}}" alt="profile-photo" />
+            </div>
+            <div class="user-details">
+                <div *ngIf="user.gender == 'male'">
+                    <p class="user-name">
+                        {{user.name}}
+                        <i class="fa fa-mars"></i>
+                    </p>
+
+                </div>
+                <div *ngIf="user.gender == 'female'">
+                    <p class="user-name">
+                        {{user.name}}
+                        <i class="fa fa-venus"></i>
+                    </p>
+                </div>
+                <div *ngIf="user.status == 'active'">
+
+                    <p class="user-email"><img class="status-icon" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Basic_green_dot.png" /> {{user.email}}</p>
+                </div>
+                <div *ngIf="user.status == 'inactive'">
+
+                    <p class="user-email"><img class="status-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Basic_red_dot.png" /> {{user.email}}</p>
+
+                </div>
+            </div>
         </div>
-        <div class="user-details">
-            <p class="user-name">Name</p>
-            <p class="user-email">Email</p>
-            <p class="user-gender">Gender</p>
-            <p class="user-status">Status</p>
-        </div>
-    </div>
+    </ng-container>
 </div>

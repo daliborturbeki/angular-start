@@ -62,12 +62,6 @@
         box-shadow: 3px 2px 9px 3px rgb(173 232 244);
         transform: translateY(-1px);
     }
-    &-thumb-container {
-        background-color: white;
-        position: relative;
-        height: 172px;
-        text-align: center;
-    }
     &-thumbnail {
         position: absolute;
         top: 0;
@@ -81,15 +75,37 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 157px;
+        height: 100px;
     }
     &-name {
         color: black;
         font-weight: 700;
         font-size: 22px;
-        margin-bottom: 20px;
         white-space: nowrap;
         text-overflow: ellipsis;
         //overflow: hidden;
     }
+    &-email {
+        color: black;
+        font-size: 13px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        //overflow: hidden;
+    }
+    &-thumb-container {
+        background-color: white;
+        position: relative;
+        height: 200px;
+        text-align: center;
+        border-bottom: 1px solid #ade8f4;
+    }
+    &-thumb-container img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.status-icon {
+    height: 10px;
+    width: 10px;
 }

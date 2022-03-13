@@ -1,7 +1,7 @@
 <div class="filters">
     <mat-form-field>
         <mat-label>Sort</mat-label>
-        <mat-select panelClass="sort-select" [(ngModel)]="sort">
+        <mat-select panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchUsers()">
             <mat-option value="name">Name</mat-option>
             <mat-option value="email">Email</mat-option>
             <mat-option value="gender">Gender</mat-option>

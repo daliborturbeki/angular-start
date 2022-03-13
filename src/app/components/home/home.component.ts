@@ -17,18 +17,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params)=> {
-      if(params['user-search']) {
-        this.searchUsers('name', params['user-search']);
-      } else {
-        this.searchUsers('name');
-      }
-    });
+        this.searchUsers();
+  });
   }
-  searchUsers(sort: string, search?: string): void{
-    this.httpService.getUsersList(sort, search).subscribe((usersList: User[]) => {
+
+  searchUsers(): void{
+    this.httpService.getUsersList().subscribe((usersList: User[]) => {
       this.users = usersList;
       console.log(usersList);
     });
   }
-
 }

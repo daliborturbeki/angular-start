@@ -12,16 +12,13 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getUsersList(ordering: string, search?: string) : Observable<APIResponse<User>> {
+  getUsersList(ordering: string, search?: string) : Observable<User[]> {
     let params = new HttpParams().set('ordering', ordering);
 
     if(search) {
       params = new HttpParams().set('ordering', ordering).set('search', search);
     }
 
-    return this.http.get<APIResponse<User>>(`${environment.BASE_URL}/users`,
-    {
-      params: params,
-    });
+    return this.http.get<User[]>(`${environment.BASE_URL}/users`);
   }
 }
